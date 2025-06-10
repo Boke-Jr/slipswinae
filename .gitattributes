@@ -1,0 +1,2 @@
+modules/slipswinae/test/friday_conn_labeled.log filter=lfs diff=lfs merge=lfs -text
+modules/slipswinae/test/thursday_conn_labeled.log filter=lfs diff=lfs merge=lfs -text
