@@ -22,11 +22,11 @@ parameters:
   # The width of the time window (TW) used by Slips. All traffic is separated in
   # TW to be analyzed. This is so old detections can be forgoten.
   # For 1 minute
-  # time_window_width : 60
+  time_window_width : 60
   # For 5 min
   # time_window_width : 300
   # For 1 hour
-  time_window_width: 3600
+  #time_window_width: 3600
   # For 1 day
   # time_window_width = 86400
   # Make Slips use only one time window (also like if no TW is used)
@@ -194,7 +194,7 @@ modules:
   # (they all should be lowercase with no special characters). Example,
   # threatintelligence, blocking, networkdiscovery, timeline, virustotal,
   # rnnccdetection, flowmldetection, updatemanager
-  disable: [template]
+  disable : [template, arp, cyst, ensembling, exportingalerts, flowalerts, threatintelligence, httpanalyzer, blocking, cesnet, ipinfo, kalipso, leakdetector, networkdiscovery, p2ptrust, riskiq, rnnccdetection, threatintelligence, timeline, updatemanager, virustotal]
 
   # For each line in timeline file there is a timestamp.
   # By default the timestamp is seconds in unix time. However
@@ -208,12 +208,12 @@ flowmldetection:
   # The mode 'train' should be used to tell the flowmldetection module
   # that the flows received are all for training.
   # A label should be provided in the [Parameters] section
-  # mode : train
+  mode : test
   # The mode 'test' should be used for normal Slips usage and  after
   # training the models, to test in unknown data.
   # You should have trained at least once with 'Normal' data and once with
   # 'Malicious' data in order for the test to work.
-  mode: test
+  #mode: test
 
 #############################
 virustotal:
